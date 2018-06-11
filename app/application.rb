@@ -3,7 +3,7 @@ class Application
   
   def call(env)
     resp = Rack::Response.new
-    t = Time.new
+    t = Time.now
     new_time = t.strftime("%k:%M").to_f
     if new_time >= 12
       resp.write "Good Afternoon!"
